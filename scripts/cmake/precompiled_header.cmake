@@ -1,0 +1,5 @@
+macro(add_precompiled_header TARGET_NAME PCH_HEADER)
+    if(NOT (CMAKE_CXX_COMPILER_ID STREQUAL "GNU"))
+        target_precompile_headers(${TARGET_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/source/${PCH_HEADER})
+    endif()
+endmacro(add_precompiled_header)

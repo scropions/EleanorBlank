@@ -1,0 +1,11 @@
+macro(set_artifacts_dir target artifacts_dir)
+    message(STATUS "${target} output directory: ${artifacts_dir}")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${artifacts_dir})
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${artifacts_dir})
+
+    foreach(output_config ${CMAKE_CONFIGURATION_TYPES})
+        string(TOUPPER ${output_config} suffix)
+        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${suffix} ${artifacts_dir}/${output_config})
+        set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_${suffix} ${artifacts_dir}/${output_config})
+    endforeach()
+endmacro()
