@@ -16,15 +16,12 @@ class Main(ConanFile):
     default_options = {"boost:shared": shared(),
                        "gtest:shared": shared(),
                        "glfw:shared": shared(),
-                       "glew:shared": shared(),
                        "glad:shared": shared()}
 
     def config_options(self):
         self.options["boost"].shared = shared()
         self.options["gtest"].shared = shared()
         self.options["glfw"].shared = shared()
-        self.options["glew"].shared = shared()
-        self.options["glew"].shared = shared()
         self.options["glad"].shared = shared()
 
     def requirements(self):
@@ -43,6 +40,3 @@ class Main(ConanFile):
     def add_opengl(self):
         self.requires("glfw/3.3.7")
         self.requires("glad/0.1.35")
-        self.requires("glew/2.2.0")
-        self.requires("opengl/system")
-        self.requires("glm/0.9.9.8")
