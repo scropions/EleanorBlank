@@ -16,7 +16,6 @@
 *.smod
 
 # My Files
-bin
 docs
 build
 Testing
