@@ -1,5 +1,7 @@
 add_subdirectory(config)
+if(WIN32)
 add_subdirectory(filesystem)
+endif()
 add_subdirectory(logger)
 add_subdirectory(ipc_network)
 add_subdirectory(ui)
