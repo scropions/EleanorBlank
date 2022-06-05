@@ -15,11 +15,11 @@
 *.mod
 *.smod
 
-# My Files
-docs
-build
 Testing
 *.user*
 *.orig
 *.autosave
 **/__pycache__
+
+bin/*
+build/*
