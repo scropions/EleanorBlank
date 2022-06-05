@@ -1,6 +1,5 @@
 add_subdirectory(config)
 add_subdirectory(filesystem)
-add_subdirectory(data_models)
 add_subdirectory(logger)
 add_subdirectory(ipc_network)
 add_subdirectory(ui)
